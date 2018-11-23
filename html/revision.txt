@@ -2,7 +2,7 @@ Repo: apm-agent-go
 --------------------------------------------------------------------------------
   APM Go Agent/docs/0.5               6cd2ec73   Merge pull request #237 from axw/0.5
   APM Go Agent/docs/1.x               cb9bc733   Update version to v1.0.0
-  APM Go Agent/docs/master            b0dda64a   Update changelog
+  APM Go Agent/docs/master            95c23eea   Merge pull request #327 from axw/sql-improvements
 
 Repo: apm-agent-java
 --------------------------------------------------------------------------------
@@ -37,7 +37,7 @@ Repo: apm-agent-ruby
 --------------------------------------------------------------------------------
   APM Ruby Agent/docs/1.x             5a493ef2   Correctly document `set_custom_context` method
   APM Ruby Agent/docs/2.x             48f8f744   Stop sending span.start, use timestamp
-  APM Ruby Agent/docs/master          6fcf7688   Truncate keyword fields to maximum 1024 chars (#240)
+  APM Ruby Agent/docs/master          97a08dfe   Update CHANGELOG.md
 
 Repo: apm-server
 --------------------------------------------------------------------------------
@@ -46,13 +46,13 @@ Repo: apm-server
   APM Overview/docs/6.2               9cdb11b7   maintain changelog per minor release (#1364)
   APM Overview/docs/6.3               b485c1fe   docs: fix broken hyperlinks in 6.3 docs (#1556)
   APM Overview/docs/6.4               04a4c4e1   Update beats framework to 89bf3b9 (#1525)
-  APM Overview/docs/6.5               9bdaf514   Update beats framework to f49b928 (#1575)
+  APM Overview/docs/6.5               4455389e   [6.5] update changelog for 6.5.1  (#1577)
   APM Overview/docs/guide/6.0         ae191ba5   Merge remote-tracking branch 'upstream/6.0' into 6.0
   APM Overview/docs/guide/6.1         e5bfd578   maintain changelog per minor release (#1365)
   APM Overview/docs/guide/6.2         9cdb11b7   maintain changelog per minor release (#1364)
   APM Overview/docs/guide/6.3         b485c1fe   docs: fix broken hyperlinks in 6.3 docs (#1556)
   APM Overview/docs/guide/6.4         04a4c4e1   Update beats framework to 89bf3b9 (#1525)
-  APM Overview/docs/guide/6.5         9bdaf514   Update beats framework to f49b928 (#1575)
+  APM Overview/docs/guide/6.5         4455389e   [6.5] update changelog for 6.5.1  (#1577)
   APM Overview/docs/guide/master      c5ed1a49   kibana: fix sync check for Kibana index pattern. (#1571)
   APM Overview/docs/master            c5ed1a49   kibana: fix sync check for Kibana index pattern. (#1571)
   APM Server Reference/CHANGELOG.asciidoc/6.0 ae191ba5   Merge remote-tracking branch 'upstream/6.0' into 6.0
@@ -621,16 +621,16 @@ Repo: beats
 Repo: cloud
 --------------------------------------------------------------------------------
   Cloud Enterprise - Elastic Cloud on your Infrastructure/docs/cloud-enterprise/1.0 a564bf1c   Add 5.6.13 in the usual places (#22953)
-  Cloud Enterprise - Elastic Cloud on your Infrastructure/docs/cloud-enterprise/1.1 e2272738   Tweak 1.1 stack versions (#23540)
-  Cloud Enterprise - Elastic Cloud on your Infrastructure/docs/cloud-enterprise/2.0 92406ec7   Bump the installer and upgrader to 2.0.1 (#23575)
-  Cloud Enterprise - Elastic Cloud on your Infrastructure/docs/shared/1.1 e2272738   Tweak 1.1 stack versions (#23540)
-  Cloud Enterprise - Elastic Cloud on your Infrastructure/docs/shared/2.0 92406ec7   Bump the installer and upgrader to 2.0.1 (#23575)
-  Elastic Cloud - Hosted Elasticsearch and Kibana/docs/saas/release-ms-13 57e77765   Add 6.5.1 to What's New (#23598)
-  Elastic Cloud - Hosted Elasticsearch and Kibana/docs/saas/release-ms-14 76154ae5   Fix Asciidoc build warning (#23630)
+  Cloud Enterprise - Elastic Cloud on your Infrastructure/docs/cloud-enterprise/1.1 33636fd1   Fix openSSL version bump to 1.0.2q-r0 (#23670)
+  Cloud Enterprise - Elastic Cloud on your Infrastructure/docs/cloud-enterprise/2.0 4a87412a   Merge pull request #23660 from pugnascotia/23612-set-default-snapshot-frequency
+  Cloud Enterprise - Elastic Cloud on your Infrastructure/docs/shared/1.1 33636fd1   Fix openSSL version bump to 1.0.2q-r0 (#23670)
+  Cloud Enterprise - Elastic Cloud on your Infrastructure/docs/shared/2.0 4a87412a   Merge pull request #23660 from pugnascotia/23612-set-default-snapshot-frequency
+  Elastic Cloud - Hosted Elasticsearch and Kibana/docs/saas/release-ms-13 a71ca622   Setting version to 2.1.0-SNAPSHOT
+  Elastic Cloud - Hosted Elasticsearch and Kibana/docs/saas/release-ms-14 9e0271e8   Merge branch 'release-ms-13' into release-ms-14
   Elastic Cloud - Hosted Elasticsearch and Kibana/docs/saas/saas-release de905d95   Move page header into correct path (#23171)
   Elastic Cloud - Hosted Elasticsearch and Kibana/docs/saas/saas-release-heroku 0e39506f   changed exampple to example (#17632)
-  Elastic Cloud - Hosted Elasticsearch and Kibana/docs/shared/release-ms-13 57e77765   Add 6.5.1 to What's New (#23598)
-  Elastic Cloud - Hosted Elasticsearch and Kibana/docs/shared/release-ms-14 76154ae5   Fix Asciidoc build warning (#23630)
+  Elastic Cloud - Hosted Elasticsearch and Kibana/docs/shared/release-ms-13 a71ca622   Setting version to 2.1.0-SNAPSHOT
+  Elastic Cloud - Hosted Elasticsearch and Kibana/docs/shared/release-ms-14 9e0271e8   Merge branch 'release-ms-13' into release-ms-14
   Elastic Cloud - Hosted Elasticsearch and Kibana/docs/shared/saas-release de905d95   Move page header into correct path (#23171)
 
 Repo: curator
@@ -653,32 +653,32 @@ Repo: curator
 
 Repo: elasticsearch
 --------------------------------------------------------------------------------
-  Community Contributed Clients/docs/community-clients/master 2887680a   Avoid NPE in follower stats when no tasks metadata (#35802)
+  Community Contributed Clients/docs/community-clients/master 51d2e986   Remove BWC conditions after backport of #35731
   Elasticsearch Reference/docs/Versions.asciidoc/5.0 c77f63e4   Grammar: "by geographically" → "geographically" (#28595)
   Elasticsearch Reference/docs/Versions.asciidoc/5.1 28f4e572   Introduce Gradle wrapper
   Elasticsearch Reference/docs/Versions.asciidoc/5.2 104b202e   Introduce Gradle wrapper
   Elasticsearch Reference/docs/Versions.asciidoc/5.3 e291e353   Introduce Gradle wrapper
   Elasticsearch Reference/docs/Versions.asciidoc/5.4 58267b13   Introduce Gradle wrapper
   Elasticsearch Reference/docs/Versions.asciidoc/5.5 b51ac8a7   [Docs] Remove Swift plugin on 5.X banches (#34633)
-  Elasticsearch Reference/docs/Versions.asciidoc/5.6 7f796519   Implement a property to allow for splitting tests. (#35473)
+  Elasticsearch Reference/docs/Versions.asciidoc/5.6 d7c419f7   Move back to maven central
   Elasticsearch Reference/docs/Versions.asciidoc/6.0 0400d820   Docs: remove notes on sparsity. (#30905)
   Elasticsearch Reference/docs/Versions.asciidoc/6.1 70b07aec   [Docs] Clarify multi match query field limit (#34801)
   Elasticsearch Reference/docs/Versions.asciidoc/6.2 b292658d   [Docs] Clarify multi match query field limit (#34801)
   Elasticsearch Reference/docs/Versions.asciidoc/6.3 5f389ea8   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Elasticsearch Reference/docs/Versions.asciidoc/6.4 a584ab44   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Elasticsearch Reference/docs/Versions.asciidoc/6.5 4d9632df   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
-  Elasticsearch Reference/docs/Versions.asciidoc/6.x 0409777c   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
-  Elasticsearch Reference/docs/Versions.asciidoc/master a204d1cd   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
+  Elasticsearch Reference/docs/Versions.asciidoc/6.x 10796ea0   Add read-only repository verification (#35731)
+  Elasticsearch Reference/docs/Versions.asciidoc/master 51d2e986   Remove BWC conditions after backport of #35731
   Elasticsearch Reference/docs/painless/5.5 b51ac8a7   [Docs] Remove Swift plugin on 5.X banches (#34633)
-  Elasticsearch Reference/docs/painless/5.6 7f796519   Implement a property to allow for splitting tests. (#35473)
+  Elasticsearch Reference/docs/painless/5.6 d7c419f7   Move back to maven central
   Elasticsearch Reference/docs/painless/6.0 0400d820   Docs: remove notes on sparsity. (#30905)
   Elasticsearch Reference/docs/painless/6.1 70b07aec   [Docs] Clarify multi match query field limit (#34801)
   Elasticsearch Reference/docs/painless/6.2 b292658d   [Docs] Clarify multi match query field limit (#34801)
   Elasticsearch Reference/docs/painless/6.3 5f389ea8   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Elasticsearch Reference/docs/painless/6.4 a584ab44   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Elasticsearch Reference/docs/painless/6.5 4d9632df   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
-  Elasticsearch Reference/docs/painless/6.x 0409777c   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
-  Elasticsearch Reference/docs/painless/master a204d1cd   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
+  Elasticsearch Reference/docs/painless/6.x 10796ea0   Add read-only repository verification (#35731)
+  Elasticsearch Reference/docs/painless/master 51d2e986   Remove BWC conditions after backport of #35731
   Elasticsearch Reference/docs/reference/0.90 2f99ae3b   [DOCS] Remove unnecessary X-Pack reference
   Elasticsearch Reference/docs/reference/1.3 597499a9   [DOCS] Remove unnecessary X-Pack reference
   Elasticsearch Reference/docs/reference/1.4 83d44499   [DOCS] Remove unnecessary X-Pack reference
@@ -696,50 +696,50 @@ Repo: elasticsearch
   Elasticsearch Reference/docs/reference/5.3 e291e353   Introduce Gradle wrapper
   Elasticsearch Reference/docs/reference/5.4 58267b13   Introduce Gradle wrapper
   Elasticsearch Reference/docs/reference/5.5 b51ac8a7   [Docs] Remove Swift plugin on 5.X banches (#34633)
-  Elasticsearch Reference/docs/reference/5.6 7f796519   Implement a property to allow for splitting tests. (#35473)
+  Elasticsearch Reference/docs/reference/5.6 d7c419f7   Move back to maven central
   Elasticsearch Reference/docs/reference/6.0 0400d820   Docs: remove notes on sparsity. (#30905)
   Elasticsearch Reference/docs/reference/6.1 70b07aec   [Docs] Clarify multi match query field limit (#34801)
   Elasticsearch Reference/docs/reference/6.2 b292658d   [Docs] Clarify multi match query field limit (#34801)
   Elasticsearch Reference/docs/reference/6.3 5f389ea8   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Elasticsearch Reference/docs/reference/6.4 a584ab44   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Elasticsearch Reference/docs/reference/6.5 4d9632df   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
-  Elasticsearch Reference/docs/reference/6.x 0409777c   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
-  Elasticsearch Reference/docs/reference/master a204d1cd   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
+  Elasticsearch Reference/docs/reference/6.x 10796ea0   Add read-only repository verification (#35731)
+  Elasticsearch Reference/docs/reference/master 51d2e986   Remove BWC conditions after backport of #35731
   Elasticsearch Reference/docs/src/test/cluster/config/5.3 e291e353   Introduce Gradle wrapper
   Elasticsearch Reference/docs/src/test/cluster/config/5.4 58267b13   Introduce Gradle wrapper
   Elasticsearch Reference/docs/src/test/cluster/config/5.5 b51ac8a7   [Docs] Remove Swift plugin on 5.X banches (#34633)
-  Elasticsearch Reference/docs/src/test/cluster/config/5.6 7f796519   Implement a property to allow for splitting tests. (#35473)
+  Elasticsearch Reference/docs/src/test/cluster/config/5.6 d7c419f7   Move back to maven central
   Elasticsearch Reference/docs/src/test/cluster/config/6.0 0400d820   Docs: remove notes on sparsity. (#30905)
   Elasticsearch Reference/docs/src/test/cluster/config/6.1 70b07aec   [Docs] Clarify multi match query field limit (#34801)
   Elasticsearch Reference/docs/src/test/cluster/config/6.2 b292658d   [Docs] Clarify multi match query field limit (#34801)
   Elasticsearch Reference/docs/src/test/cluster/config/6.3 5f389ea8   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Elasticsearch Reference/docs/src/test/cluster/config/6.4 a584ab44   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Elasticsearch Reference/docs/src/test/cluster/config/6.5 4d9632df   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
-  Elasticsearch Reference/docs/src/test/cluster/config/6.x 0409777c   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
-  Elasticsearch Reference/docs/src/test/cluster/config/master a204d1cd   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
+  Elasticsearch Reference/docs/src/test/cluster/config/6.x 10796ea0   Add read-only repository verification (#35731)
+  Elasticsearch Reference/docs/src/test/cluster/config/master 51d2e986   Remove BWC conditions after backport of #35731
   Elasticsearch Reference/plugins/examples/5.5 b51ac8a7   [Docs] Remove Swift plugin on 5.X banches (#34633)
-  Elasticsearch Reference/plugins/examples/5.6 7f796519   Implement a property to allow for splitting tests. (#35473)
+  Elasticsearch Reference/plugins/examples/5.6 d7c419f7   Move back to maven central
   Elasticsearch Reference/plugins/examples/6.0 0400d820   Docs: remove notes on sparsity. (#30905)
   Elasticsearch Reference/plugins/examples/6.1 70b07aec   [Docs] Clarify multi match query field limit (#34801)
   Elasticsearch Reference/plugins/examples/6.2 b292658d   [Docs] Clarify multi match query field limit (#34801)
   Elasticsearch Reference/plugins/examples/6.3 5f389ea8   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Elasticsearch Reference/plugins/examples/6.4 a584ab44   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Elasticsearch Reference/plugins/examples/6.5 4d9632df   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
-  Elasticsearch Reference/plugins/examples/6.x 0409777c   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
-  Elasticsearch Reference/plugins/examples/master a204d1cd   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
+  Elasticsearch Reference/plugins/examples/6.x 10796ea0   Add read-only repository verification (#35731)
+  Elasticsearch Reference/plugins/examples/master 51d2e986   Remove BWC conditions after backport of #35731
   Elasticsearch Reference/x-pack/docs/6.3 5f389ea8   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Elasticsearch Reference/x-pack/docs/6.4 a584ab44   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Elasticsearch Reference/x-pack/docs/6.5 4d9632df   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
-  Elasticsearch Reference/x-pack/docs/6.x 0409777c   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
-  Elasticsearch Reference/x-pack/docs/master a204d1cd   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
-  Elasticsearch Reference/x-pack/plugin/sql/qa/6.x 0409777c   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
-  Elasticsearch Reference/x-pack/plugin/sql/qa/master a204d1cd   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
+  Elasticsearch Reference/x-pack/docs/6.x 10796ea0   Add read-only repository verification (#35731)
+  Elasticsearch Reference/x-pack/docs/master 51d2e986   Remove BWC conditions after backport of #35731
+  Elasticsearch Reference/x-pack/plugin/sql/qa/6.x 10796ea0   Add read-only repository verification (#35731)
+  Elasticsearch Reference/x-pack/plugin/sql/qa/master 51d2e986   Remove BWC conditions after backport of #35731
   Elasticsearch Reference/x-pack/qa/sql/6.3 5f389ea8   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Elasticsearch Reference/x-pack/qa/sql/6.4 a584ab44   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Elasticsearch Reference/x-pack/qa/sql/6.5 4d9632df   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
   Elasticsearch Reference/x-pack/qa/sql/6.x b65e1026   Docs: Remove range notation from random score docs (#35093)
   Elasticsearch Reference/x-pack/qa/sql/master 6abddd8c   SQL: Optimizer rule for folding nullable expressions (#35080)
-  Elasticsearch Resiliency Status/docs/resiliency/master 2887680a   Avoid NPE in follower stats when no tasks metadata (#35802)
+  Elasticsearch Resiliency Status/docs/resiliency/master 51d2e986   Remove BWC conditions after backport of #35731
   Elasticsearch 참조/docs/5.3           e291e353   Introduce Gradle wrapper
   Elasticsearch 참조/docs/5.4           58267b13   Introduce Gradle wrapper
   Elasticsearch 참조/docs/kr/reference/5.3 e291e353   Introduce Gradle wrapper
@@ -748,7 +748,7 @@ Repo: elasticsearch
   Elasticsearchリファレンス/docs/5.4        58267b13   Introduce Gradle wrapper
   Elasticsearchリファレンス/docs/jp/reference/5.3 e291e353   Introduce Gradle wrapper
   Elasticsearchリファレンス/docs/jp/reference/5.4 58267b13   Introduce Gradle wrapper
-  Groovy API/docs/Versions.asciidoc/master 2887680a   Avoid NPE in follower stats when no tasks metadata (#35802)
+  Groovy API/docs/Versions.asciidoc/master 51d2e986   Remove BWC conditions after backport of #35731
   Groovy API/docs/groovy-api/0.90     2f99ae3b   [DOCS] Remove unnecessary X-Pack reference
   Groovy API/docs/groovy-api/1.3      597499a9   [DOCS] Remove unnecessary X-Pack reference
   Groovy API/docs/groovy-api/1.4      83d44499   [DOCS] Remove unnecessary X-Pack reference
@@ -760,29 +760,29 @@ Repo: elasticsearch
   Groovy API/docs/groovy-api/2.2      e42c0255   [DOCS] Remove unnecessary X-Pack reference
   Groovy API/docs/groovy-api/2.3      2cc67160   [DOCS] Remove unnecessary X-Pack reference
   Groovy API/docs/groovy-api/2.4      66de6c3b   [DOCS] Correct index/_settings filtering syntax
-  Groovy API/docs/groovy-api/master   2887680a   Avoid NPE in follower stats when no tasks metadata (#35802)
+  Groovy API/docs/groovy-api/master   51d2e986   Remove BWC conditions after backport of #35731
   Installation and Upgrade Guide/docs/5.0 c77f63e4   Grammar: "by geographically" → "geographically" (#28595)
   Installation and Upgrade Guide/docs/5.1 28f4e572   Introduce Gradle wrapper
   Installation and Upgrade Guide/docs/5.2 104b202e   Introduce Gradle wrapper
   Installation and Upgrade Guide/docs/5.3 e291e353   Introduce Gradle wrapper
   Installation and Upgrade Guide/docs/5.4 58267b13   Introduce Gradle wrapper
   Installation and Upgrade Guide/docs/5.5 b51ac8a7   [Docs] Remove Swift plugin on 5.X banches (#34633)
-  Installation and Upgrade Guide/docs/5.6 7f796519   Implement a property to allow for splitting tests. (#35473)
+  Installation and Upgrade Guide/docs/5.6 d7c419f7   Move back to maven central
   Installation and Upgrade Guide/docs/6.0 0400d820   Docs: remove notes on sparsity. (#30905)
   Installation and Upgrade Guide/docs/6.1 70b07aec   [Docs] Clarify multi match query field limit (#34801)
   Installation and Upgrade Guide/docs/6.2 b292658d   [Docs] Clarify multi match query field limit (#34801)
   Installation and Upgrade Guide/docs/6.3 5f389ea8   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Installation and Upgrade Guide/docs/6.4 a584ab44   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Installation and Upgrade Guide/docs/6.5 4d9632df   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
-  Installation and Upgrade Guide/docs/6.x 0409777c   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
-  Installation and Upgrade Guide/docs/master a204d1cd   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
+  Installation and Upgrade Guide/docs/6.x 10796ea0   Add read-only repository verification (#35731)
+  Installation and Upgrade Guide/docs/master 51d2e986   Remove BWC conditions after backport of #35731
   Java API/client/rest-high-level/src/test/java/org/elasticsearch/client/6.0 0400d820   Docs: remove notes on sparsity. (#30905)
   Java API/client/rest-high-level/src/test/java/org/elasticsearch/client/6.1 70b07aec   [Docs] Clarify multi match query field limit (#34801)
   Java API/client/rest-high-level/src/test/java/org/elasticsearch/client/6.2 b292658d   [Docs] Clarify multi match query field limit (#34801)
   Java API/client/rest-high-level/src/test/java/org/elasticsearch/client/6.3 5f389ea8   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Java API/client/rest-high-level/src/test/java/org/elasticsearch/client/6.4 a584ab44   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
-  Java API/client/rest-high-level/src/test/java/org/elasticsearch/client/6.5 ff93f222   [Docs] Correct template example description #35829
-  Java API/client/rest-high-level/src/test/java/org/elasticsearch/client/6.x 43806cce   Clean up PutLicenseResponse (#35689)
+  Java API/client/rest-high-level/src/test/java/org/elasticsearch/client/6.5 4d9632df   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
+  Java API/client/rest-high-level/src/test/java/org/elasticsearch/client/6.x 10796ea0   Add read-only repository verification (#35731)
   Java API/client/rest-high-level/src/test/java/org/elasticsearch/client/documentation/6.0 e48db6fe   Emphasize that filesystem-level backups don't work (#33102)
   Java API/client/rest-high-level/src/test/java/org/elasticsearch/client/documentation/6.1 cf82c987   Emphasize that filesystem-level backups don't work (#33102)
   Java API/client/rest-high-level/src/test/java/org/elasticsearch/client/documentation/6.2 3553d219   Emphasize that filesystem-level backups don't work (#33102)
@@ -791,22 +791,22 @@ Repo: elasticsearch
   Java API/client/rest-high-level/src/test/java/org/elasticsearch/client/documentation/6.5 f44d9e83   [DOCS] Added attributes for HLRC javadoc packages. (#34934)
   Java API/client/rest-high-level/src/test/java/org/elasticsearch/client/documentation/6.x 70846ea9   HLRC: Add security Create Token API (#34791)
   Java API/client/rest-high-level/src/test/java/org/elasticsearch/client/documentation/master 6fd7ea71   HLRC: DRY up remaining CRUD docs (#34925)
-  Java API/client/rest-high-level/src/test/java/org/elasticsearch/client/master 3c059ee0   [HLRC][ML] Add ML find file structure API (#35833)
+  Java API/client/rest-high-level/src/test/java/org/elasticsearch/client/master 51d2e986   Remove BWC conditions after backport of #35731
   Java API/docs/Versions.asciidoc/5.0 c77f63e4   Grammar: "by geographically" → "geographically" (#28595)
   Java API/docs/Versions.asciidoc/5.1 28f4e572   Introduce Gradle wrapper
   Java API/docs/Versions.asciidoc/5.2 104b202e   Introduce Gradle wrapper
   Java API/docs/Versions.asciidoc/5.3 e291e353   Introduce Gradle wrapper
   Java API/docs/Versions.asciidoc/5.4 58267b13   Introduce Gradle wrapper
   Java API/docs/Versions.asciidoc/5.5 b51ac8a7   [Docs] Remove Swift plugin on 5.X banches (#34633)
-  Java API/docs/Versions.asciidoc/5.6 7f796519   Implement a property to allow for splitting tests. (#35473)
+  Java API/docs/Versions.asciidoc/5.6 d7c419f7   Move back to maven central
   Java API/docs/Versions.asciidoc/6.0 0400d820   Docs: remove notes on sparsity. (#30905)
   Java API/docs/Versions.asciidoc/6.1 70b07aec   [Docs] Clarify multi match query field limit (#34801)
   Java API/docs/Versions.asciidoc/6.2 b292658d   [Docs] Clarify multi match query field limit (#34801)
   Java API/docs/Versions.asciidoc/6.3 5f389ea8   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Java API/docs/Versions.asciidoc/6.4 a584ab44   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
-  Java API/docs/Versions.asciidoc/6.5 ff93f222   [Docs] Correct template example description #35829
-  Java API/docs/Versions.asciidoc/6.x 43806cce   Clean up PutLicenseResponse (#35689)
-  Java API/docs/Versions.asciidoc/master 3c059ee0   [HLRC][ML] Add ML find file structure API (#35833)
+  Java API/docs/Versions.asciidoc/6.5 4d9632df   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
+  Java API/docs/Versions.asciidoc/6.x 10796ea0   Add read-only repository verification (#35731)
+  Java API/docs/Versions.asciidoc/master 51d2e986   Remove BWC conditions after backport of #35731
   Java API/docs/java-api/0.90         2f99ae3b   [DOCS] Remove unnecessary X-Pack reference
   Java API/docs/java-api/1.3          597499a9   [DOCS] Remove unnecessary X-Pack reference
   Java API/docs/java-api/1.4          83d44499   [DOCS] Remove unnecessary X-Pack reference
@@ -824,113 +824,113 @@ Repo: elasticsearch
   Java API/docs/java-api/5.3          e291e353   Introduce Gradle wrapper
   Java API/docs/java-api/5.4          58267b13   Introduce Gradle wrapper
   Java API/docs/java-api/5.5          b51ac8a7   [Docs] Remove Swift plugin on 5.X banches (#34633)
-  Java API/docs/java-api/5.6          7f796519   Implement a property to allow for splitting tests. (#35473)
+  Java API/docs/java-api/5.6          d7c419f7   Move back to maven central
   Java API/docs/java-api/6.0          0400d820   Docs: remove notes on sparsity. (#30905)
   Java API/docs/java-api/6.1          70b07aec   [Docs] Clarify multi match query field limit (#34801)
   Java API/docs/java-api/6.2          b292658d   [Docs] Clarify multi match query field limit (#34801)
   Java API/docs/java-api/6.3          5f389ea8   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Java API/docs/java-api/6.4          a584ab44   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
-  Java API/docs/java-api/6.5          ff93f222   [Docs] Correct template example description #35829
-  Java API/docs/java-api/6.x          43806cce   Clean up PutLicenseResponse (#35689)
-  Java API/docs/java-api/master       3c059ee0   [HLRC][ML] Add ML find file structure API (#35833)
-  Java API/modules/reindex/src/test/java/org/elasticsearch/client/documentation/5.6 7f796519   Implement a property to allow for splitting tests. (#35473)
+  Java API/docs/java-api/6.5          4d9632df   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
+  Java API/docs/java-api/6.x          10796ea0   Add read-only repository verification (#35731)
+  Java API/docs/java-api/master       51d2e986   Remove BWC conditions after backport of #35731
+  Java API/modules/reindex/src/test/java/org/elasticsearch/client/documentation/5.6 d7c419f7   Move back to maven central
   Java API/modules/reindex/src/test/java/org/elasticsearch/client/documentation/6.0 0400d820   Docs: remove notes on sparsity. (#30905)
   Java API/modules/reindex/src/test/java/org/elasticsearch/client/documentation/6.1 70b07aec   [Docs] Clarify multi match query field limit (#34801)
   Java API/modules/reindex/src/test/java/org/elasticsearch/client/documentation/6.2 b292658d   [Docs] Clarify multi match query field limit (#34801)
   Java API/modules/reindex/src/test/java/org/elasticsearch/client/documentation/6.3 5f389ea8   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Java API/modules/reindex/src/test/java/org/elasticsearch/client/documentation/6.4 a584ab44   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
-  Java API/modules/reindex/src/test/java/org/elasticsearch/client/documentation/6.5 ff93f222   [Docs] Correct template example description #35829
-  Java API/modules/reindex/src/test/java/org/elasticsearch/client/documentation/6.x 43806cce   Clean up PutLicenseResponse (#35689)
-  Java API/modules/reindex/src/test/java/org/elasticsearch/client/documentation/master 3c059ee0   [HLRC][ML] Add ML find file structure API (#35833)
+  Java API/modules/reindex/src/test/java/org/elasticsearch/client/documentation/6.5 4d9632df   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
+  Java API/modules/reindex/src/test/java/org/elasticsearch/client/documentation/6.x 10796ea0   Add read-only repository verification (#35731)
+  Java API/modules/reindex/src/test/java/org/elasticsearch/client/documentation/master 51d2e986   Remove BWC conditions after backport of #35731
   Java API/server/src/test/java/org/elasticsearch/client/documentation/6.0 0400d820   Docs: remove notes on sparsity. (#30905)
   Java API/server/src/test/java/org/elasticsearch/client/documentation/6.1 70b07aec   [Docs] Clarify multi match query field limit (#34801)
   Java API/server/src/test/java/org/elasticsearch/client/documentation/6.2 b292658d   [Docs] Clarify multi match query field limit (#34801)
   Java API/server/src/test/java/org/elasticsearch/client/documentation/6.3 5f389ea8   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Java API/server/src/test/java/org/elasticsearch/client/documentation/6.4 a584ab44   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
-  Java API/server/src/test/java/org/elasticsearch/client/documentation/6.5 ff93f222   [Docs] Correct template example description #35829
-  Java API/server/src/test/java/org/elasticsearch/client/documentation/6.x 43806cce   Clean up PutLicenseResponse (#35689)
-  Java API/server/src/test/java/org/elasticsearch/client/documentation/master 3c059ee0   [HLRC][ML] Add ML find file structure API (#35833)
-  Java REST Client/client/5.6         7f796519   Implement a property to allow for splitting tests. (#35473)
+  Java API/server/src/test/java/org/elasticsearch/client/documentation/6.5 4d9632df   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
+  Java API/server/src/test/java/org/elasticsearch/client/documentation/6.x 10796ea0   Add read-only repository verification (#35731)
+  Java API/server/src/test/java/org/elasticsearch/client/documentation/master 51d2e986   Remove BWC conditions after backport of #35731
+  Java REST Client/client/5.6         d7c419f7   Move back to maven central
   Java REST Client/client/6.0         0400d820   Docs: remove notes on sparsity. (#30905)
   Java REST Client/client/6.1         70b07aec   [Docs] Clarify multi match query field limit (#34801)
   Java REST Client/client/6.2         b292658d   [Docs] Clarify multi match query field limit (#34801)
   Java REST Client/client/6.3         5f389ea8   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Java REST Client/client/6.4         a584ab44   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
-  Java REST Client/client/6.5         59c5c368   Avoid NPE in follower stats when no tasks metadata (#35802)
-  Java REST Client/client/6.x         43806cce   Clean up PutLicenseResponse (#35689)
-  Java REST Client/client/master      3c059ee0   [HLRC][ML] Add ML find file structure API (#35833)
+  Java REST Client/client/6.5         4d9632df   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
+  Java REST Client/client/6.x         10796ea0   Add read-only repository verification (#35731)
+  Java REST Client/client/master      51d2e986   Remove BWC conditions after backport of #35731
   Java REST Client/docs/Versions.asciidoc/5.0 c77f63e4   Grammar: "by geographically" → "geographically" (#28595)
   Java REST Client/docs/Versions.asciidoc/5.1 28f4e572   Introduce Gradle wrapper
   Java REST Client/docs/Versions.asciidoc/5.2 104b202e   Introduce Gradle wrapper
   Java REST Client/docs/Versions.asciidoc/5.3 e291e353   Introduce Gradle wrapper
   Java REST Client/docs/Versions.asciidoc/5.4 58267b13   Introduce Gradle wrapper
   Java REST Client/docs/Versions.asciidoc/5.5 b51ac8a7   [Docs] Remove Swift plugin on 5.X banches (#34633)
-  Java REST Client/docs/Versions.asciidoc/5.6 7f796519   Implement a property to allow for splitting tests. (#35473)
+  Java REST Client/docs/Versions.asciidoc/5.6 d7c419f7   Move back to maven central
   Java REST Client/docs/Versions.asciidoc/6.0 0400d820   Docs: remove notes on sparsity. (#30905)
   Java REST Client/docs/Versions.asciidoc/6.1 70b07aec   [Docs] Clarify multi match query field limit (#34801)
   Java REST Client/docs/Versions.asciidoc/6.2 b292658d   [Docs] Clarify multi match query field limit (#34801)
   Java REST Client/docs/Versions.asciidoc/6.3 5f389ea8   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Java REST Client/docs/Versions.asciidoc/6.4 a584ab44   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
-  Java REST Client/docs/Versions.asciidoc/6.5 59c5c368   Avoid NPE in follower stats when no tasks metadata (#35802)
-  Java REST Client/docs/Versions.asciidoc/6.x 43806cce   Clean up PutLicenseResponse (#35689)
-  Java REST Client/docs/Versions.asciidoc/master 3c059ee0   [HLRC][ML] Add ML find file structure API (#35833)
+  Java REST Client/docs/Versions.asciidoc/6.5 4d9632df   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
+  Java REST Client/docs/Versions.asciidoc/6.x 10796ea0   Add read-only repository verification (#35731)
+  Java REST Client/docs/Versions.asciidoc/master 51d2e986   Remove BWC conditions after backport of #35731
   Java REST Client/docs/java-rest/5.0 c77f63e4   Grammar: "by geographically" → "geographically" (#28595)
   Java REST Client/docs/java-rest/5.1 28f4e572   Introduce Gradle wrapper
   Java REST Client/docs/java-rest/5.2 104b202e   Introduce Gradle wrapper
   Java REST Client/docs/java-rest/5.3 e291e353   Introduce Gradle wrapper
   Java REST Client/docs/java-rest/5.4 58267b13   Introduce Gradle wrapper
   Java REST Client/docs/java-rest/5.5 b51ac8a7   [Docs] Remove Swift plugin on 5.X banches (#34633)
-  Java REST Client/docs/java-rest/5.6 7f796519   Implement a property to allow for splitting tests. (#35473)
+  Java REST Client/docs/java-rest/5.6 d7c419f7   Move back to maven central
   Java REST Client/docs/java-rest/6.0 0400d820   Docs: remove notes on sparsity. (#30905)
   Java REST Client/docs/java-rest/6.1 70b07aec   [Docs] Clarify multi match query field limit (#34801)
   Java REST Client/docs/java-rest/6.2 b292658d   [Docs] Clarify multi match query field limit (#34801)
   Java REST Client/docs/java-rest/6.3 5f389ea8   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Java REST Client/docs/java-rest/6.4 a584ab44   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
-  Java REST Client/docs/java-rest/6.5 59c5c368   Avoid NPE in follower stats when no tasks metadata (#35802)
-  Java REST Client/docs/java-rest/6.x 43806cce   Clean up PutLicenseResponse (#35689)
-  Java REST Client/docs/java-rest/master 3c059ee0   [HLRC][ML] Add ML find file structure API (#35833)
+  Java REST Client/docs/java-rest/6.5 4d9632df   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
+  Java REST Client/docs/java-rest/6.x 10796ea0   Add read-only repository verification (#35731)
+  Java REST Client/docs/java-rest/master 51d2e986   Remove BWC conditions after backport of #35731
   Painless Scripting Language/docs/Versions.asciidoc/5.5 b51ac8a7   [Docs] Remove Swift plugin on 5.X banches (#34633)
-  Painless Scripting Language/docs/Versions.asciidoc/5.6 7f796519   Implement a property to allow for splitting tests. (#35473)
+  Painless Scripting Language/docs/Versions.asciidoc/5.6 d7c419f7   Move back to maven central
   Painless Scripting Language/docs/Versions.asciidoc/6.0 0400d820   Docs: remove notes on sparsity. (#30905)
   Painless Scripting Language/docs/Versions.asciidoc/6.1 70b07aec   [Docs] Clarify multi match query field limit (#34801)
   Painless Scripting Language/docs/Versions.asciidoc/6.2 b292658d   [Docs] Clarify multi match query field limit (#34801)
   Painless Scripting Language/docs/Versions.asciidoc/6.3 5f389ea8   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Painless Scripting Language/docs/Versions.asciidoc/6.4 a584ab44   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
-  Painless Scripting Language/docs/Versions.asciidoc/6.5 59c5c368   Avoid NPE in follower stats when no tasks metadata (#35802)
-  Painless Scripting Language/docs/Versions.asciidoc/6.x 0b7d1954   Avoid NPE in follower stats when no tasks metadata (#35802)
-  Painless Scripting Language/docs/Versions.asciidoc/master 2887680a   Avoid NPE in follower stats when no tasks metadata (#35802)
+  Painless Scripting Language/docs/Versions.asciidoc/6.5 4d9632df   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
+  Painless Scripting Language/docs/Versions.asciidoc/6.x 10796ea0   Add read-only repository verification (#35731)
+  Painless Scripting Language/docs/Versions.asciidoc/master 51d2e986   Remove BWC conditions after backport of #35731
   Painless Scripting Language/docs/painless/5.5 b51ac8a7   [Docs] Remove Swift plugin on 5.X banches (#34633)
-  Painless Scripting Language/docs/painless/5.6 7f796519   Implement a property to allow for splitting tests. (#35473)
+  Painless Scripting Language/docs/painless/5.6 d7c419f7   Move back to maven central
   Painless Scripting Language/docs/painless/6.0 0400d820   Docs: remove notes on sparsity. (#30905)
   Painless Scripting Language/docs/painless/6.1 70b07aec   [Docs] Clarify multi match query field limit (#34801)
   Painless Scripting Language/docs/painless/6.2 b292658d   [Docs] Clarify multi match query field limit (#34801)
   Painless Scripting Language/docs/painless/6.3 5f389ea8   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Painless Scripting Language/docs/painless/6.4 a584ab44   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
-  Painless Scripting Language/docs/painless/6.5 59c5c368   Avoid NPE in follower stats when no tasks metadata (#35802)
-  Painless Scripting Language/docs/painless/6.x 0b7d1954   Avoid NPE in follower stats when no tasks metadata (#35802)
-  Painless Scripting Language/docs/painless/master 2887680a   Avoid NPE in follower stats when no tasks metadata (#35802)
-  Perl API/docs/perl/master           2887680a   Avoid NPE in follower stats when no tasks metadata (#35802)
+  Painless Scripting Language/docs/painless/6.5 4d9632df   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
+  Painless Scripting Language/docs/painless/6.x 10796ea0   Add read-only repository verification (#35731)
+  Painless Scripting Language/docs/painless/master 51d2e986   Remove BWC conditions after backport of #35731
+  Perl API/docs/perl/master           51d2e986   Remove BWC conditions after backport of #35731
   Plugins and Integrations/buildSrc/src/main/resources/6.2 b292658d   [Docs] Clarify multi match query field limit (#34801)
   Plugins and Integrations/buildSrc/src/main/resources/6.3 5f389ea8   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Plugins and Integrations/buildSrc/src/main/resources/6.4 a584ab44   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
-  Plugins and Integrations/buildSrc/src/main/resources/6.5 59c5c368   Avoid NPE in follower stats when no tasks metadata (#35802)
-  Plugins and Integrations/buildSrc/src/main/resources/6.x 0b7d1954   Avoid NPE in follower stats when no tasks metadata (#35802)
-  Plugins and Integrations/buildSrc/src/main/resources/master 2887680a   Avoid NPE in follower stats when no tasks metadata (#35802)
+  Plugins and Integrations/buildSrc/src/main/resources/6.5 4d9632df   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
+  Plugins and Integrations/buildSrc/src/main/resources/6.x 10796ea0   Add read-only repository verification (#35731)
+  Plugins and Integrations/buildSrc/src/main/resources/master 51d2e986   Remove BWC conditions after backport of #35731
   Plugins and Integrations/docs/Versions.asciidoc/5.0 c77f63e4   Grammar: "by geographically" → "geographically" (#28595)
   Plugins and Integrations/docs/Versions.asciidoc/5.1 28f4e572   Introduce Gradle wrapper
   Plugins and Integrations/docs/Versions.asciidoc/5.2 104b202e   Introduce Gradle wrapper
   Plugins and Integrations/docs/Versions.asciidoc/5.3 e291e353   Introduce Gradle wrapper
   Plugins and Integrations/docs/Versions.asciidoc/5.4 58267b13   Introduce Gradle wrapper
   Plugins and Integrations/docs/Versions.asciidoc/5.5 b51ac8a7   [Docs] Remove Swift plugin on 5.X banches (#34633)
-  Plugins and Integrations/docs/Versions.asciidoc/5.6 7f796519   Implement a property to allow for splitting tests. (#35473)
+  Plugins and Integrations/docs/Versions.asciidoc/5.6 d7c419f7   Move back to maven central
   Plugins and Integrations/docs/Versions.asciidoc/6.0 0400d820   Docs: remove notes on sparsity. (#30905)
   Plugins and Integrations/docs/Versions.asciidoc/6.1 70b07aec   [Docs] Clarify multi match query field limit (#34801)
   Plugins and Integrations/docs/Versions.asciidoc/6.2 b292658d   [Docs] Clarify multi match query field limit (#34801)
   Plugins and Integrations/docs/Versions.asciidoc/6.3 5f389ea8   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Plugins and Integrations/docs/Versions.asciidoc/6.4 a584ab44   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
-  Plugins and Integrations/docs/Versions.asciidoc/6.5 59c5c368   Avoid NPE in follower stats when no tasks metadata (#35802)
-  Plugins and Integrations/docs/Versions.asciidoc/6.x 0b7d1954   Avoid NPE in follower stats when no tasks metadata (#35802)
-  Plugins and Integrations/docs/Versions.asciidoc/master 2887680a   Avoid NPE in follower stats when no tasks metadata (#35802)
+  Plugins and Integrations/docs/Versions.asciidoc/6.5 4d9632df   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
+  Plugins and Integrations/docs/Versions.asciidoc/6.x 10796ea0   Add read-only repository verification (#35731)
+  Plugins and Integrations/docs/Versions.asciidoc/master 51d2e986   Remove BWC conditions after backport of #35731
   Plugins and Integrations/docs/plugins/1.7 6c302a4f   [DOCS] Remove unnecessary X-Pack reference
   Plugins and Integrations/docs/plugins/2.0 ba398c28   [DOCS] Remove unnecessary X-Pack reference
   Plugins and Integrations/docs/plugins/2.1 dcd0e885   [DOCS] Remove unnecessary X-Pack reference
@@ -943,27 +943,27 @@ Repo: elasticsearch
   Plugins and Integrations/docs/plugins/5.3 e291e353   Introduce Gradle wrapper
   Plugins and Integrations/docs/plugins/5.4 58267b13   Introduce Gradle wrapper
   Plugins and Integrations/docs/plugins/5.5 b51ac8a7   [Docs] Remove Swift plugin on 5.X banches (#34633)
-  Plugins and Integrations/docs/plugins/5.6 7f796519   Implement a property to allow for splitting tests. (#35473)
+  Plugins and Integrations/docs/plugins/5.6 d7c419f7   Move back to maven central
   Plugins and Integrations/docs/plugins/6.0 0400d820   Docs: remove notes on sparsity. (#30905)
   Plugins and Integrations/docs/plugins/6.1 70b07aec   [Docs] Clarify multi match query field limit (#34801)
   Plugins and Integrations/docs/plugins/6.2 b292658d   [Docs] Clarify multi match query field limit (#34801)
   Plugins and Integrations/docs/plugins/6.3 5f389ea8   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Plugins and Integrations/docs/plugins/6.4 a584ab44   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
-  Plugins and Integrations/docs/plugins/6.5 59c5c368   Avoid NPE in follower stats when no tasks metadata (#35802)
-  Plugins and Integrations/docs/plugins/6.x 0b7d1954   Avoid NPE in follower stats when no tasks metadata (#35802)
-  Plugins and Integrations/docs/plugins/master 2887680a   Avoid NPE in follower stats when no tasks metadata (#35802)
-  Python API/docs/python/master       2887680a   Avoid NPE in follower stats when no tasks metadata (#35802)
-  Ruby API/docs/ruby/master           2887680a   Avoid NPE in follower stats when no tasks metadata (#35802)
+  Plugins and Integrations/docs/plugins/6.5 4d9632df   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
+  Plugins and Integrations/docs/plugins/6.x 10796ea0   Add read-only repository verification (#35731)
+  Plugins and Integrations/docs/plugins/master 51d2e986   Remove BWC conditions after backport of #35731
+  Python API/docs/python/master       51d2e986   Remove BWC conditions after backport of #35731
+  Ruby API/docs/ruby/master           51d2e986   Remove BWC conditions after backport of #35731
   Stack Overview/docs/6.3             5f389ea8   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Stack Overview/docs/6.4             a584ab44   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Stack Overview/docs/6.5             4d9632df   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
-  Stack Overview/docs/6.x             0409777c   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
-  Stack Overview/docs/master          a204d1cd   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
+  Stack Overview/docs/6.x             10796ea0   Add read-only repository verification (#35731)
+  Stack Overview/docs/master          51d2e986   Remove BWC conditions after backport of #35731
   Stack Overview/x-pack/docs/6.3      5f389ea8   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Stack Overview/x-pack/docs/6.4      a584ab44   [DOCS] Update sysctl instructions for Docker on Mac (#35755)
   Stack Overview/x-pack/docs/6.5      4d9632df   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
-  Stack Overview/x-pack/docs/6.x      0409777c   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
-  Stack Overview/x-pack/docs/master   a204d1cd   [Docs] Fix typo in datehistogram-aggregation.asciidoc (#35855)
+  Stack Overview/x-pack/docs/6.x      10796ea0   Add read-only repository verification (#35731)
+  Stack Overview/x-pack/docs/master   51d2e986   Remove BWC conditions after backport of #35731
 
 Repo: elasticsearch-hadoop
 --------------------------------------------------------------------------------
@@ -1015,9 +1015,9 @@ Repo: elasticsearch-php-cn
 
 Repo: elasticsearch-sql-odbc
 --------------------------------------------------------------------------------
-  Elasticsearch SQL ODBC Driver/docs/6.5 f6841056   Fix SQLFetch behavior with multirow binded arrays (#58)
-  Elasticsearch SQL ODBC Driver/docs/6.x cbd0bab0   Fix SQLFetch behavior with multirow binded arrays (#58)
-  Elasticsearch SQL ODBC Driver/docs/master 91aadb5a   Better 32bit support (#63)
+  Elasticsearch SQL ODBC Driver/docs/6.5 ef9f84bf   fix: reduce UJSON4C stack consumption (#62)
+  Elasticsearch SQL ODBC Driver/docs/6.x f99e4b46   Add license headers
+  Elasticsearch SQL ODBC Driver/docs/master 35639dd5   Merge pull request #66 from elastic/add-licenses
 
 Repo: guide
 --------------------------------------------------------------------------------
@@ -1051,18 +1051,18 @@ Repo: kibana
   Kibana Reference/docs/6.2           6c5b9cb7   Remove version and snapshots from readme (#25747)
   Kibana Reference/docs/6.3           938e2e79   Remove version and snapshots from readme (#25747)
   Kibana Reference/docs/6.4           396b8b37   [Docs/Reporting] Include working config example for multiple kibana.index (#25410) (#25814)
-  Kibana Reference/docs/6.5           adf4ffa6   [DOCS] Adds screenshot for monitoring jobs (#25904)
-  Kibana Reference/docs/6.x           d9b1c0b6   New visualization type selection (#23833) (#26085)
-  Kibana Reference/docs/master        8c14c256   New visualization type selection (#23833)
+  Kibana Reference/docs/6.5           ebfd7d32   [ML] Ensures jobs from saved searches are cloned in advanced wizard (#26002) (#26122)
+  Kibana Reference/docs/6.x           a6367e34   [6.x] Fix quotes in kbn-i18n build scripts (#26120) (#26123)
+  Kibana Reference/docs/master        18ae6a49   [dev/build] use more performant copy implementation (#26109)
   Kibana 사용자 가이드/docs/kr/5.3          1470baf2   painless reference didn't exist before 5.5
   Kibana 사용자 가이드/docs/kr/5.4          eba77124   painless reference didn't exist before 5.5
   Kibanaユーザーガイド/docs/jp/5.3           1470baf2   painless reference didn't exist before 5.5
   Kibanaユーザーガイド/docs/jp/5.4           eba77124   painless reference didn't exist before 5.5
   Stack Overview/docs/6.3             938e2e79   Remove version and snapshots from readme (#25747)
   Stack Overview/docs/6.4             396b8b37   [Docs/Reporting] Include working config example for multiple kibana.index (#25410) (#25814)
-  Stack Overview/docs/6.5             227e836e   Fix quotes in kbn-i18n build scripts (#26120) (#26124)
+  Stack Overview/docs/6.5             ebfd7d32   [ML] Ensures jobs from saved searches are cloned in advanced wizard (#26002) (#26122)
   Stack Overview/docs/6.x             a6367e34   [6.x] Fix quotes in kbn-i18n build scripts (#26120) (#26123)
-  Stack Overview/docs/master          56e27e6c   Fix quotes in kbn-i18n build scripts (#26120)
+  Stack Overview/docs/master          18ae6a49   [dev/build] use more performant copy implementation (#26109)
 
 Repo: kibana-cn
 --------------------------------------------------------------------------------
@@ -1090,7 +1090,7 @@ Repo: logstash
   Logstash Reference/docs/6.4         4162f549   update lock file for the 6.4 branch (#10162)
   Logstash Reference/docs/6.5         adf4080b   Update Kafka download version
   Logstash Reference/docs/6.x         0f3f0f6f   Update Kafka download version
-  Logstash Reference/docs/master      c0244017   Update Kafka download version
+  Logstash Reference/docs/master      14a06143   add reference json file with logstash releases (#10173)
   Logstash 참조/docs/kr/5.3             93a28254   [DOCS] Removed unnecessary X-Pack info
   Logstash 참조/docs/kr/5.4             e69f5910   [DOCS] Added index.x.asciidoc (#9079)
   Logstashリファレンス/docs/jp/5.3          93a28254   [DOCS] Removed unnecessary X-Pack info

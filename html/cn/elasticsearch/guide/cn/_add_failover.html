@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>添加故障转移
         | Elasticsearch: 权威指南
       | Elastic
-    </title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><link rel="home" href="index.html" title="Elasticsearch: 权威指南" /><link rel="up" href="distributed-cluster.html" title="集群内的原理" /><link rel="prev" href="_add-an-index.html" title="添加索引" /><link rel="next" href="_scale_horizontally.html" title="水平扩容" /><meta name="description" content="有关如何使用 Elasticsearch、Kibana、Logstash、Beats、X-Pack、Elastic Cloud、Elasticsearch for Apache Hadoop 及我们各种语言的客户端的文档。" /><meta name="DC.type" content="Learn/Docs/Elasticsearch/Definitive Guide" /><meta name="description" content="有关如何使用 Elasticsearch、Kibana、Logstash、Beats、X-Pack、Elastic Cloud、Elasticsearch for Apache Hadoop 及我们各种语言的客户端的文档。" /><meta name="DC.subject" content="Elasticsearch" /><meta name="description" content="有关如何使用 Elasticsearch、Kibana、Logstash、Beats、X-Pack、Elastic Cloud、Elasticsearch for Apache Hadoop 及我们各种语言的客户端的文档。" /><meta name="DC.identifier" content="cn" />
+    </title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><link rel="home" href="index.html" title="Elasticsearch: 权威指南" /><link rel="up" href="distributed-cluster.html" title="集群内的原理" /><link rel="prev" href="_add-an-index.html" title="添加索引" /><link rel="next" href="_scale_horizontally.html" title="水平扩容" /><meta name="description" content="有关如何使用 Elasticsearch、Kibana、Logstash、Beats、X-Pack、Elastic Cloud、Elasticsearch for Apache Hadoop 及我们各种语言的客户端的文档。" /><meta name="DC.type" content="Learn/Docs/Elasticsearch/Definitive Guide" /><meta name="DC.subject" content="Elasticsearch" /><meta name="DC.identifier" content="cn" />
     
 
     
@@ -165,14 +165,14 @@
     <script type="text/javascript">
       var active;
       
-      active = Math.random() < 1
+      active = Math.random() < 0.1
       
       elasticApm.init({
       active: active,
-      serviceName: "elastic-co-frontend",
+      serviceName: "elastic-co-test",
       serverUrl: "https://elastic-co-apm-server.app.elstc.co"
       })
-      elasticApm.setTags({env:"production"});
+      elasticApm.setTags({env:"staging"});
       elasticApm.setInitialPageLoadName(window.location.href);
     </script>
     
